@@ -1,11 +1,13 @@
 
 class Event {
-  final String title;
-  final List<String> notes;
-  final bool isPeriod;
+  String title;
+  List<String> notes;
+  bool isPeriod;
+  double bloodFlow;
 
-  const Event({required this.title, required this.isPeriod, required this.notes});
+  Event({required this.title, required this.notes})
+      : isPeriod = true, bloodFlow = 3;
 
   @override
-  String toString() => '${[title, isPeriod]}';
+  String toString() => '${[title, isPeriod, bloodFlow]}';
 }
